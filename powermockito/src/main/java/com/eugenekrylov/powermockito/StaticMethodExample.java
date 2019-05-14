@@ -1,12 +1,14 @@
 package com.eugenekrylov.powermockito;
 
-public class StaticMethodExample {
+class StaticMethodExample {
 
-    public String getValuePublic() {
+    private static final String ORIGINAL_VALUE = "original value";
+
+    String getValuePublic() {
         return getValueStatic();
     }
 
     static String getValueStatic() {
-        return "original value";
+        return ORIGINAL_VALUE;
     }
 }

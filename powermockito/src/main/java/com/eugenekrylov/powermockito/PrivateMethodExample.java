@@ -1,12 +1,14 @@
 package com.eugenekrylov.powermockito;
 
-public class PrivateMethodExample {
+class PrivateMethodExample {
 
-    public String getValuePublic() {
+    private static final String ORIGINAL_VALUE = "original value";
+
+    String getValuePublic() {
         return getValuePrivate();
     }
 
     private String getValuePrivate() {
-        return "original value";
+        return ORIGINAL_VALUE;
     }
 }

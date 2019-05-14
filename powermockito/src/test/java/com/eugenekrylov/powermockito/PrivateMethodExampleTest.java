@@ -19,7 +19,7 @@ public class PrivateMethodExampleTest {
     public void privateMethodOverride() throws Exception {
         PrivateMethodExample obj = spy(new PrivateMethodExample());
 
-        when(obj, "getValueStatic").thenReturn(INJECTED_VALUE);
+        when(obj, "getValuePrivate").thenReturn(INJECTED_VALUE);
         assertEquals("Returned value", INJECTED_VALUE, obj.getValuePublic());
     }
 }

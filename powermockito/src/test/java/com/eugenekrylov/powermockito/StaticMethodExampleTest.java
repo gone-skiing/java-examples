@@ -15,7 +15,7 @@ public class StaticMethodExampleTest {
     private static final String INJECTED_VALUE = "injected value";
 
     @Test
-    public void staticMethodOverride() throws Exception {
+    public void staticMethodOverride() {
         mockStatic(StaticMethodExample.class);
         when(StaticMethodExample.getValueStatic()).thenReturn(INJECTED_VALUE);
 
